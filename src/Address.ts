@@ -11,7 +11,6 @@ export default class Address {
         this.city = city;
         this.state = state;
         this.country = country;
-        console.log(`Address ${this.street}, ${this.number}, ${this.city}, ${this.state}, ${this.country} created successfully`);
     }
 
     get streetAddress(): string {
