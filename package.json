@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --import=tsx ./src/index.ts"
+    "start-user": "node --import=tsx ./src/index.ts",
+    "start-payment": "node --import=tsx ./src/payments/indexPayment.ts"
   },
   "keywords": [],
   "author": "",
