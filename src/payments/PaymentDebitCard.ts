@@ -1,15 +1,16 @@
 import { PaymentCard } from "./PaymentCard.js";
 import { PAYMENT_STATUS } from "./enums/Payment_Status.js"; 
+import { PAYMENT_METHOD } from "./enums/Payment_Method.js"; 
+
 import type { ProcessPaymentInterface } from "./interface/ProcessPaymentInterface.js";
 
 export class PaymentDebitCard extends PaymentCard implements ProcessPaymentInterface {
  
     tax = 0.02;
-
-    private static type: string = "Debit Card";
+ 
 
      constructor(amount: number, date: Date, description: string, cardNumber: string, cardHolder: string, expirationDate: string, cvv: string) {
-        super(amount, date, description, cardNumber, cardHolder, expirationDate, cvv, PaymentDebitCard.type);
+        super(amount, date, description, cardNumber, cardHolder, expirationDate, cvv, PAYMENT_METHOD.DEBIT_CARD);
      }
 
     async startPayment(amount: number, date: Date, description: string): Promise<string> {
