@@ -35,4 +35,12 @@ export abstract class PaymentCard extends Payment {
         const totalAmount = this.amount + (this.amount * this.tax);
         return `Processing payment of ${totalAmount} - tax ${this.tax} -  with card ${this.cardNumber}...`;
     }
+ 
+    async getTaxAmount(): Promise<number>{
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve(this.amount * this.tax);
+            }, 2000);
+        });
+    }
 }
