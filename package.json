@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --import=tsx ./src/index.ts"
+    "start-user": "node --import=tsx ./src/index.ts",
+    "start-payment": "node --import=tsx ./src/payments/indexPayment.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
