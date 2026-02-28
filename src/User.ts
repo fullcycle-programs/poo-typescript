@@ -31,4 +31,7 @@ export default class User {
         return this.email;
     }
     
+    getReports() : void {
+        console.log(`User ${this.name} getting a report`);
+    }
 }

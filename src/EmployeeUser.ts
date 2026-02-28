@@ -12,4 +12,8 @@ export default class EmployeeUser extends User {
     get employeeSalary() : number {
         return this.salary;
     }
+
+    getReports() : void {
+        console.log(`Custom getting a report`);
+    }
 }

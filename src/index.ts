@@ -22,3 +22,6 @@ const manager2 = new ManagerUser("John Manager Admin", "john.doe@example.com", 1
 console.log(manager2);
 manager2.getReportEmployee(employee);
 console.log( `${manager2.getReportEmployee(employee)}`);
+
+
+employee.getReports();
