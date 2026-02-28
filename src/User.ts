@@ -1,37 +1,38 @@
 import Address from "./Address.js";
 
 export default class User {
-    private name: string;
-    private email: string;
-    private age: number = 0;
-    private password: string;
-    private address: Address;
+    private _name: string;
+    private _email: string;
+    private _age: number = 0;
+    private _password: string;
+    private _address: Address;
 
     constructor(name: string, email: string, age: number, password: string, address: Address) {
-        this.name = name;
-        this.email = email; 
+        this._name = name;
+        this._email = email; 
         this.setAge(age);
-        this.password = password; 
-        this.address = address;
-        console.log(`User ${this.name} created successfully`);
+        this._password = password; 
+        this._address = address;
+        console.log(`User ${this.userName} created successfully`);
     }
  
     protected setAge(age: number): void {
         if (age < 0 || age > 120) {
             throw new Error("Age must be between 0 and 120");
         }
-        this.age = age;
+        this._age = age;
     }
 
     get userName(): string {
-        return this.name;
+        return this._name;
     }
 
+
     get userEmail(): string {
-        return this.email;
+        return this._email;
     }
     
     getReports() : void {
-        console.log(`User ${this.name} getting a report`);
+        console.log(`User ${this._name} getting a report`);
     }
 }
